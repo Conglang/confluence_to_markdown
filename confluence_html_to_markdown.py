@@ -2,6 +2,12 @@ import sys, errno, os
 import re
 import subprocess
 import shutil
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument('--input_dir', default='.', help = "Directory of the input htmls")
+parser.add_argument('--output_dir', default='./output', help = "Directory of the output markdown files")
+
 
 def is_path_exist(pathname):
     return os.path.exists(pathname)
@@ -145,5 +151,8 @@ class Processor():
             return
 
 if __name__ == "__main__":
-    pro = Processor()
+    args = parser.parse_args()
+    input_dir = args.input_dir
+    output_dir = args.output_dir
+    pro = Processor(input = input_dir, output = output_dir)
     pro.processing()
