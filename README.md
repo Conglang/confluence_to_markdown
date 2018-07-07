@@ -25,5 +25,5 @@ Select Normal Export to produce an HTML file containing all the pages that you h
 Select Custom Export if you want to export a subset of pages, or to exclude comments from the export.
 5. ![Export Pages] (https://confluence.atlassian.com/conf54/files/428803470/confluence_spaceadmin_exportHTML.png)
 6. Extract zip.
-7. Open shell in extracted zip
+7. Open shell in extracted zip.
 8. Run `python confluence_html_to_markdown.py --input_dir "YOUR_INPUT_PATH" --output_dir "YOUR_OUTPUT_PATH"`.
